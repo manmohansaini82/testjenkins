@@ -1,24 +1,20 @@
 pipeline {
-    agent {
-        label 'my-agent'
-    }
+    agent any
+
     stages {
         stage('Build') {
             steps {
-            echo 'Build'
-                // define build steps here
+                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-            echo 'Test'
-                // define test steps here
+                echo 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-             echo 'Deploy'
-                // define deployment steps here
+                echo 'Deploying....'
             }
         }
     }
